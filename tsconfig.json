@@ -10,6 +10,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "ngx-bs-tel-light": [
+        "./dist/ngx-bs-tel-light"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,

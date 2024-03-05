@@ -1,0 +1,62 @@
+<div class="input-group mb-3">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      <object [ngClass]="selectedCountry().flagClass" class="me-1"></object>
+      @if(includeDialCode()){
+      <span class="ms-2">+{{selectedCountry().dialCode}}</span>
+      }
+    </button>
+    <ul class="dropdown-menu scrollable-menu" #countryList>
+      @if(searchCountryField()){
+      <li>
+        <input id="country-search-box" class="form-control" [(ngModel)]="countrySearchText" (keyup)="searchCountry()"
+          (click)="$event.stopPropagation()" [placeholder]="searchCountryPlaceholder()" autofocus title="Search country">
+      </li>
+      }
+  
+      @for( country of preferredCountriesInDropDown(); track country){
+      <li class="dropdown-item" (click)="onCountrySelect(country, focusable)" [id]="country.htmlId+'-preferred'">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div [ngClass]="country.flagClass" class="me-1"></div>
+              </td>
+              <td>
+                <span class="">{{country.name}}</span>
+                <span class="">+{{country.dialCode}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      }
+  
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      @for(country of allCountriesfiltered(); track country){
+   <li class="dropdown-item" (click)="onCountrySelect(country, focusable)"
+        [id]="country.htmlId">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div [ngClass]="country.flagClass" class="me-1"></div>
+              </td>
+              <td>
+                <span class="">{{country.name}}</span>
+                <span class="">+{{country.dialCode}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      }
+     
+    </ul>
+    <input class="form-control" type="tel" appPhoneNumberValidator [id]="inputId()" autocomplete="off" (blur)="onTouched()"
+      [placeholder]="resolvePlaceholder()" (keypress)="onInputKeyPress($event)" [(ngModel)]="phoneNumber"
+      (ngModelChange)="onPhoneNumberChange()" [disabled]="disabled()" [placeholder]="resolvePlaceholder()"
+      [attr.validation]="phoneValidation" #focusable title="Phone Number">
+  </div>
