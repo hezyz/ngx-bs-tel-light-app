@@ -1,24 +1,35 @@
 # NgxBsTelLight
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
-## Code scaffolding
+# Bootstrap 5.3 Telephone Input - NgxBsTelLight
 
-Run `ng generate component component-name --project ngx-bs-tel-light` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-bs-tel-light`.
-> Note: Don't forget to add `--project ngx-bs-tel-light` or else it will be added to the default project in your `angular.json` file. 
+There is another version using google-libphonenumber at [Ngx-bs-tel-input](https://www.npmjs.com/package/ngx-bs-tel-input)
+Difference: Google's libphonenumber vs libphonenumber-js
+Smaller footprint: 145 kB (65 kB code + 80 kB sufficient metadata) vs the original Google's 550 kB (350 kB code + 200 kB full metadata).
 
-## Build
+An Angular package.
 
-Run `ng build ngx-bs-tel-light` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Instalation
+Install bootstrap
+```bash
+npm install bootstrap
+```
+Install libphonenumber-js
+```bash
+npm install libphonenumber-js
+```
+# Telephone Input - Country code picker
 
-## Publishing
+Working demo: [demo](https://monggos.com/tel)
 
-After building your library with `ng build ngx-bs-tel-light`, go to the dist folder `cd dist/ngx-bs-tel-light` and run `npm publish`.
+Enter and validate international phone numbers validate by libphonenumber-js
 
-## Running unit tests
+Based on ngx-intl-tel-input, Bootstrap 5 version. Removed ngx-bootstrap and use Bootstrap 5.3 for the dropdown control
 
-Run `ng test ngx-bs-tel-light` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Screenshot](https://github.com/hezyz/ngx-bs-tel-input/blob/main/src/assets/Screenshot%202023-07-11%20at%201.59.08.png)
 
-## Further help
+![Screenshot](https://github.com/hezyz/ngx-bs-tel-input/blob/main/src/assets/Screenshot%202023-07-11%20at%201.59.25.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+

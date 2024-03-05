@@ -1,27 +1,36 @@
-# NgxBsTelLightApp
+# NgxBsTelLight
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
-## Development server
+# Bootstrap 5.3 Telephone Input - NgxBsTelLight
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+There is another version using google-libphonenumber at [Ngx-bs-tel-input](https://www.npmjs.com/package/ngx-bs-tel-input)
+Difference: Google's libphonenumber vs libphonenumber-js
+Smaller footprint: 145 kB (65 kB code + 80 kB sufficient metadata) vs the original Google's 550 kB (350 kB code + 200 kB full metadata).
 
-## Code scaffolding
+An Angular package.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Instalation
+Install bootstrap
+```bash
+npm install bootstrap
+```
+Install libphonenumber-js
+```bash
+npm install libphonenumber-js
+```
+# Telephone Input - Country code picker
 
-## Build
+Working demo: [demo](https://monggos.com/tel)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Enter and validate international phone numbers validate by libphonenumber-js
 
-## Running unit tests
+Based on ngx-intl-tel-input, Bootstrap 5 version. Removed ngx-bootstrap and use Bootstrap 5.3 for the dropdown control
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Screenshot](https://github.com/hezyz/ngx-bs-tel-input/blob/main/src/assets/Screenshot%202023-07-11%20at%201.59.08.png)
 
-## Running end-to-end tests
+![Screenshot](https://github.com/hezyz/ngx-bs-tel-input/blob/main/src/assets/Screenshot%202023-07-11%20at%201.59.25.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
