@@ -2,10 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
+This version of ngx tel input uses libphonenumber-js
+
 # Bootstrap 5.3 Telephone Input - NgxBsTelLight
 
 There is another version using google-libphonenumber at [Ngx-bs-tel-input](https://www.npmjs.com/package/ngx-bs-tel-input)
-Difference: Google's libphonenumber vs libphonenumber-js
+
+### Difference: Google's libphonenumber vs libphonenumber-js
+
 Smaller footprint: 145 kB (65 kB code + 80 kB sufficient metadata) vs the original Google's 550 kB (350 kB code + 200 kB full metadata).
 
 An Angular package.
