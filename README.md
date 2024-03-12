@@ -10,7 +10,7 @@ Smaller footprint: 145 kB (65 kB code + 80 kB sufficient metadata) vs the origin
 
 An Angular package.
 
-# Instalation
+# Installation
 Install bootstrap
 ```bash
 npm install bootstrap
