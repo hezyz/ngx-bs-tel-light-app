@@ -9,6 +9,7 @@ import { PhoneNumberFormat } from '../../projects/ngx-bs-tel-light/src/lib/core/
 
 @Component({
     selector: 'app-root',
+	standalone: true,
     imports: [CommonModule, FormsModule, ReactiveFormsModule, NgxBsTelLightComponent],
     templateUrl: './app.component.html'
 })
