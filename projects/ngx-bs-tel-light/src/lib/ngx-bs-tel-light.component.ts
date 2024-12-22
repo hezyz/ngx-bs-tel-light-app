@@ -11,26 +11,26 @@ import { FormsModule, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { phoneNumberValidator } from './core/validator/ngx-bs-tel-light.validator';
 
 @Component({
-  selector: 'ngx-bs-tel-light',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-	templateUrl: './ngx-bs-tel-light.component.html',
-	styleUrls: ['./flags/css/intTellInput.css'],
-	styles: `.scrollable-menu {max-height: 280px; overflow-y: auto;}`,
-	providers: [
-		CountryCodeList,
-		{
-			provide: NG_VALUE_ACCESSOR,
-			// tslint:disable-next-line:no-forward-ref
-			useExisting: forwardRef(() => NgxBsTelLightComponent),
-			multi: true,
-		},
-		{
-			provide: NG_VALIDATORS,
-			useValue: phoneNumberValidator,
-			multi: true,
-		},
-	],
+    selector: 'ngx-bs-tel-light',
+	standalone: true,
+    imports: [CommonModule, FormsModule],
+    templateUrl: './ngx-bs-tel-light.component.html',
+    styleUrls: ['./flags/css/intTellInput.css'],
+    styles: `.scrollable-menu {max-height: 280px; overflow-y: auto;}`,
+    providers: [
+        CountryCodeList,
+        {
+            provide: NG_VALUE_ACCESSOR,
+            // tslint:disable-next-line:no-forward-ref
+            useExisting: forwardRef(() => NgxBsTelLightComponent),
+            multi: true,
+        },
+        {
+            provide: NG_VALIDATORS,
+            useValue: phoneNumberValidator,
+            multi: true,
+        },
+    ]
 })
 export class NgxBsTelLightComponent {
 
